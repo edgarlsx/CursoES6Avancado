@@ -1,4 +1,5 @@
 // fetch, Async/Await e EventEmitter
+// fetch não funciona testando no vsCode, somente no Browse.
 
 // fetch('http://localhost:8080/data.json')
 //     .then(responseStream => {
@@ -32,28 +33,28 @@ const asyncTimer = () =>
     }, 1000)
 })
 
-const simpleFunc = async () => {
+const simpleFuncAsync = async () => {
+    //chama uma função por vez.
     const data = await asyncTimer();
     return data;
 
-    // posso adicionar o fetch dessa forma.
+    // posso adicionar o fetch dessa forma
     // const dataJson = await fetch('/data.json').then(resStream => resStream.json());
     // return dataJson;
 };
 
 const simpleFunc = async () => {
-    const data = await asyncTimer();
+    //chama as duas funções ao mesmo tempo com o Promise
+    const data = await Promise.all([
+        asyncTimer() /*, 
+        fetch('/data.json').then(resStream => resStream.json()) */
+    ]);
+    
     return data;
-
-    // posso adicionar o fetch dessa forma.
-    // const dataJson = await fetch('/data.json').then(resStream => resStream.json());
-    // return dataJson;
 };
-
-
 
 simpleFunc().then(data =>{
-    console.log(data, dataJson);
+    console.log(data);
 }).catch(err =>{
     console.log(err)
 })
