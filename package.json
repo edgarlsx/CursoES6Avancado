@@ -1,0 +1,26 @@
+{
+  "name": "CursoES6Avancado",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Aula3.js",
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "mocha": "^6.2.3"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edgarlsx/CursoES6Avancado.git"
+  },
+  "keywords": [],
+  "author": "Edgar Lopes da Silva <edgarlsx@hotmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edgarlsx/CursoES6Avancado/issues"
+  },
+  "homepage": "https://github.com/edgarlsx/CursoES6Avancado#readme"
+}
