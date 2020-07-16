@@ -1,3 +1,4 @@
+import fetch from 'cross-fetch';
 // fetch, Async/Await e EventEmitter
 // fetch não funciona testando no vsCode, somente no Browse.
 
@@ -46,8 +47,8 @@ const simpleFuncAsync = async () => {
 const simpleFunc = async () => {
     //chama as duas funções ao mesmo tempo com o Promise
     const data = await Promise.all([
-        asyncTimer() /*, 
-        fetch('/data.json').then(resStream => resStream.json()) */
+        asyncTimer(), 
+        fetch('/data.json').then(resStream => resStream.json()) 
     ]);
     
     return data;
