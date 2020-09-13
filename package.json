@@ -4,7 +4,7 @@
   "description": "",
   "main": "Aula3.js",
   "dependencies": {
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.1"
   },
   "devDependencies": {
     "mocha": "^6.2.3"
